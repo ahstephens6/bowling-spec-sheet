@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { BowlerService } from '../../services/bowler-service';
 import { BowlerInterface } from '../../interfaces/interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bowler',
@@ -13,7 +14,12 @@ export class Bowler {
     
   constructor (
     private bowlerService: BowlerService,
+    private router: Router,
   ) {
-    
+    // Empty 
+  }
+
+  goToSpecSheet() {
+    this.router.navigate([])
   }
 }
