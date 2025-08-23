@@ -1,6 +1,7 @@
-<main class="main">
-  Hello!!!
-</main>
-
-
+<nav>
+  
+</nav>
+@for (bowler of bowlerList; track bowler) {
+  <app-bowler [person]="bowler" />
+}
 <router-outlet />
