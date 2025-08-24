@@ -1,4 +1,4 @@
 <header >
-    <h3>{{ person?.firstName }} {{ person?.lastName}}</h3>
+    <a [routerLink]="['/spec-sheet', person?.id]">{{ person?.firstName }} {{ person?.lastName}}</a>
 </header>
 
