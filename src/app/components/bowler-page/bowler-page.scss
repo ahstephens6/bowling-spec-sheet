@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as *;
+
+.bowler-card-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 5px;
+    .bowler-card {
+        display: block;
+        padding: 3px 3px;
+        min-width: fit-content;
+        border: 1px solid $mili-black;
+        border-radius: 4px;
+    }
+}
