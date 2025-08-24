@@ -6,7 +6,7 @@ import { Bowler } from './components/bowler/bowler';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Bowler],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -7,9 +7,7 @@ import { BowlerInterface, BowlingBallInterface } from '../interfaces/interfaces'
 export class BowlerService {
   bowlers: BowlerInterface[] | undefined;
 
-  constructor(
-
-  ) {
+  constructor() {
     this.bowlers = this.getBowlers();
   }
 
@@ -52,5 +50,9 @@ export class BowlerService {
         arsenal: [],
       },
     ];
+  }
+
+  getBowlerById(id: string): BowlerInterface | undefined {
+    return this.bowlers?.find((b: BowlerInterface) => b.id === id);
   }
 }

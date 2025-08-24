@@ -1,5 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BowlerInterface } from '../../interfaces/interfaces';
+import { BowlerService } from '../../services/bowler-service';
+import { Bowler } from '../bowler/bowler';
 
 @Component({
   selector: 'app-spec-sheet',
@@ -9,8 +12,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SpecSheet {
   route: ActivatedRoute = inject(ActivatedRoute);
-  bowlerId: number = -1;
+  bowlerService: BowlerService = inject(BowlerService);
+  bowler: BowlerInterface | undefined;
+
   constructor() {
-    this.bowlerId = Number(this.route.snapshot.params['id']);
+    this.bowler = this.bowlerService.getBowlerById(this.getUrlId());
+  }
+
+  getUrlId(): string {
+    return this.route.snapshot.params['id'];
   }
 }
