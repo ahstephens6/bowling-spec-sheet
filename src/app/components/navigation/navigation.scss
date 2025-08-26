@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+
+.navigation-container {
+    width: 100%;
+    background-color: $mili-black;
+    .nav-list-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        .nav-list-item {
+            display: block;
+            background-color: $mili-light-gray;
+            list-style-type: none;
+            padding: 5px 5px;
+            border: 1px, solid, $mili-black;
+            .nav-link {
+                text-decoration: none;
+                color: $mili-black;
+            }
+        }
+    }
+}
