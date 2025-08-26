@@ -26,5 +26,17 @@
                 pointer-events: none;
             }
         }
+        .active-nav-link {
+            background-color: $mili-orange;
+            border: 1px solid $mili-black;
+            .nav-link {
+                color: $mili-white;
+            }
+            &:hover {
+                .nav-link {
+                    color: $mili-black;
+                }
+            }
+        }
     }
 }

@@ -1,7 +1,10 @@
 <nav class="navigation-container">
     <ul class="nav-list-container no-space">
         @for(link of navLinks; track link) {
-            <li [routerLink]="link.route" class="nav-list-item">
+            <li 
+                [routerLink]="link.route"
+                class="nav-list-item {{ isLinkActive(link) ? 'active-nav-link' : '' }}"
+                >
                 <a [id]="link.name" class="nav-link">
                     {{ link.name }}
                 </a>
