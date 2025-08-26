@@ -42,3 +42,8 @@ export interface SpecSheet {
         }
     },
 }
+
+export interface NavigationInterface {
+    name: string,
+    route: string,
+}

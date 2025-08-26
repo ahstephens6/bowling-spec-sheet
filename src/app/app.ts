@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { BowlerService } from './services/bowler-service';
 import { BowlerInterface } from './interfaces/interfaces';
 import { Bowler } from './components/bowler/bowler';
+import { Navigation } from "./components/navigation/navigation";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Navigation],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
