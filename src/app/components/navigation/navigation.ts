@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, Router, ActivatedRoute } from '@angular/router';
 import { NavigationInterface } from '../../interfaces/interfaces';
-import { NAVLINKS } from '../constants/constants'
+import { NAVLINKS } from '../../constants/constants'
 
 @Component({
   selector: 'app-navigation',
@@ -19,7 +19,10 @@ export class Navigation {
   }
 
   isLinkActive(link: NavigationInterface): boolean {
-    console.log(this.router.url == `/${link.route}`);
+    console.log({
+      url: this.router.url,
+      linkRoute: link.route,
+    });
     return this.router.url == `/${link.route}`;
   }
 }
