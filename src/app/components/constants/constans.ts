@@ -7,10 +7,10 @@ export const NAVLINKS: NavigationInterface[] = [
     },
     {
         name: 'Add Bowler',
-        route: `addBowler`,
+        route: `addBowler/:id`,
     },
     {
         name: `Remove Bowler`,
-        route: `removeBowler`,
+        route: `removeBowler/:id`,
     },
 ];

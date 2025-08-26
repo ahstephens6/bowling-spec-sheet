@@ -14,9 +14,16 @@
             list-style-type: none;
             padding: 5px 5px;
             border: 1px, solid, $mili-black;
+            cursor: pointer;
+            &:hover {
+                background-color: $mili-white;
+                color: $mili-black;
+                border: 1px, solid $mili-orange;
+            }
             .nav-link {
                 text-decoration: none;
                 color: $mili-black;
+                pointer-events: none;
             }
         }
     }
