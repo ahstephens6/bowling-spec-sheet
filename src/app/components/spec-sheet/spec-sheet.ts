@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BowlerInterface } from '../../interfaces/interfaces';
+import { BowlerInterface, SpecSheetInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
 
 @Component({
@@ -14,13 +14,13 @@ export class SpecSheet {
   bowlerService: BowlerService = inject(BowlerService);
   bowler: BowlerInterface | undefined;
 
-  @Input() sheetID: string | undefined;
+  @Input() specSheet: SpecSheetInterface | undefined;
 
   constructor() {
-    this.bowler = this.bowlerService.getBowlerById(this.getUrlId());
+    // Empty
   }
-
-  getUrlId(): string {
-    return this.route.snapshot.params['id'];
+  
+  ngOnInit() {
+    this.bowler = this.specSheet?.player;
   }
 }

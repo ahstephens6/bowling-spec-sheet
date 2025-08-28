@@ -5,7 +5,15 @@ import { BowlerInterface, BowlingBallInterface } from '../interfaces/interfaces'
   providedIn: 'root'
 })
 export class BowlerService {
-  bowlers: BowlerInterface[] | undefined;
+  bowlers: BowlerInterface[] | [{
+    id: '-1',
+    gender: 'male',
+    firstName: 'Default',
+    lastName: 'Name',
+    usesThumb: true,
+    rightHanded: true,
+    arsenal: [],
+  }];
 
   constructor() {
     this.bowlers = this.getBowlers();

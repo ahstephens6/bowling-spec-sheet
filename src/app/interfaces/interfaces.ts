@@ -19,18 +19,14 @@ export interface BowlingBallInterface {
 
 export interface Pitches {
     vertical: number,
-    laternal: number,
-}
-
-export interface ThumbOval {
-    oval: number,
+    lateral: number,
 }
 
 export interface SpecSheetInterface {
     name: string,
     player: BowlerInterface,
     data: {
-        span: {
+        span?: {
             thumbToRing: number,
             thumbToMiddle: number,
         }
@@ -38,7 +34,7 @@ export interface SpecSheetInterface {
         ringFinger: Pitches,
         thumb?: {
             pitch: Pitches,
-            oval: ThumbOval,
+            oval: Number,
         }
     },
 }
