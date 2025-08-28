@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BowlerInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
@@ -13,6 +13,8 @@ export class SpecSheet {
   route: ActivatedRoute = inject(ActivatedRoute);
   bowlerService: BowlerService = inject(BowlerService);
   bowler: BowlerInterface | undefined;
+
+  @Input() sheetID: string | undefined;
 
   constructor() {
     this.bowler = this.bowlerService.getBowlerById(this.getUrlId());

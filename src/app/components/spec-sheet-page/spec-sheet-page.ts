@@ -4,7 +4,7 @@ import { SpecSheet } from '../spec-sheet/spec-sheet';
 
 @Component({
   selector: 'app-spec-sheet-page',
-  imports: [SpecSheet],
+  imports: [],
   templateUrl: './spec-sheet-page.html',
   styleUrl: './spec-sheet-page.scss'
 })
