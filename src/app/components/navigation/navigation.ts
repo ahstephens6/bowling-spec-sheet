@@ -19,10 +19,8 @@ export class Navigation {
   }
 
   isLinkActive(link: NavigationInterface): boolean {
-    console.log({
-      url: this.router.url,
-      linkRoute: link.route,
-    });
-    return this.router.url == `/${link.route}`;
+    let [splitLink]: string[] = link.route.split(`/`);
+    let splitRoute: string = this.router.url.split(`/`)[1];
+    return splitLink == splitRoute;
   }
 }

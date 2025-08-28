@@ -4,7 +4,7 @@ export interface BowlerInterface {
     lastName: string,
     firstName: string,
     usesThumb: boolean,
-    sheets?: SpecSheet[],
+    sheets?: SpecSheetInterface[],
     rightHanded: boolean,
     arsenal: BowlingBallInterface[],
 }
@@ -26,7 +26,7 @@ export interface ThumbOval {
     oval: number,
 }
 
-export interface SpecSheet {
+export interface SpecSheetInterface {
     name: string,
     player: BowlerInterface,
     data: {

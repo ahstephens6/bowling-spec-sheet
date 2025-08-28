@@ -13,4 +13,8 @@ export const NAVLINKS: NavigationInterface[] = [
         name: `Remove Bowler`,
         route: `removeBowler/:id`,
     },
+    {
+        name: `Spec Sheet`,
+        route: `spec-sheet/:id`
+    }
 ];

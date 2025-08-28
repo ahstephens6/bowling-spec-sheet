@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BowlerInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
-import { Bowler } from '../bowler/bowler';
 
 @Component({
   selector: 'app-spec-sheet',
