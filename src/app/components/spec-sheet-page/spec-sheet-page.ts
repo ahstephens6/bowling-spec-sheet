@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { SpecSheetInterface } from '../../interfaces/interfaces';
 import { SpecSheet } from '../spec-sheet/spec-sheet';
 import { BowlerService } from '../../services/bowler-service';
-import { SpecSheetService } from '../../services/spec-sheet-service';
 
 @Component({
   selector: 'app-spec-sheet-page',
@@ -12,7 +11,6 @@ import { SpecSheetService } from '../../services/spec-sheet-service';
 })
 export class SpecSheetPage {
   bowlerService: BowlerService = inject(BowlerService);
-  specSheetService: SpecSheetService = inject(SpecSheetService);
   specSheets: SpecSheetInterface[] | undefined = this.getSpecSheets();
 
   constructor() {
@@ -20,7 +18,7 @@ export class SpecSheetPage {
   }  
 
   getSpecSheets(): SpecSheetInterface[] | undefined {
-    if (this.bowlerService.bowlers) return this.specSheetService.specSheets;
+    if (this.bowlerService.bowlers) return this.bowlerService.specSheets;
     else return undefined;
   }
 }

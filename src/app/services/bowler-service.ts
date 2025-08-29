@@ -1,26 +1,20 @@
 import { Injectable } from '@angular/core';
-import { BowlerInterface, BowlingBallInterface } from '../interfaces/interfaces';
+import { BowlerInterface, BowlingBallInterface, SpecSheetInterface } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BowlerService {
-  bowlers: BowlerInterface[] | [{
-    id: '-1',
-    gender: 'male',
-    firstName: 'Default',
-    lastName: 'Name',
-    usesThumb: true,
-    rightHanded: true,
-    arsenal: [],
-  }];
+  bowlers: BowlerInterface[] = []
+  specSheets: SpecSheetInterface[] = [];
 
   constructor() {
-    this.bowlers = this.getBowlers();
+    this.setBowlers();
+    this.setSpecSheets();
   }
 
-  getBowlers(): BowlerInterface[] {
-    return [
+  setBowlers() {
+    this.bowlers = [
       {
         id: '1',
         gender: 'male',
@@ -29,6 +23,23 @@ export class BowlerService {
         usesThumb: false,
         rightHanded: true,
         arsenal: [],
+        sheets: [
+          {
+            id: '1',
+            name: 'Jackson Specs 2025',
+            player: this.bowlers[0],
+            data: {
+              middleFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              ringFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+            },
+          },
+        ]
       },
       {
         id: '2',
@@ -38,6 +49,34 @@ export class BowlerService {
         usesThumb: true,
         rightHanded: true,
         arsenal: [],
+        sheets: [
+          {
+            id: '2',
+            name: 'Taylor Specs 2025',
+            player: this.bowlers[1],
+            data: {
+              span: {
+                thumbToRing: 2,
+                thumbToMiddle: 2,
+              },
+              middleFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              ringFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              thumb: {
+                  pitch: {
+                    vertical: 0,
+                    lateral: 0,
+                  },
+                  oval: 40,
+              },
+            },
+          },
+        ]
       },
       {
         id: '3',
@@ -47,6 +86,34 @@ export class BowlerService {
         usesThumb: true,
         rightHanded: true,
         arsenal: [],
+        sheets: [
+          {
+            id: '3',
+            name: 'Xander Specs 2025',
+            player: this.bowlers[2],
+            data: {
+              span: {
+                thumbToRing: 2,
+                thumbToMiddle: 2,
+              },
+              middleFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              ringFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              thumb: {
+                  pitch: {
+                    vertical: 0,
+                    lateral: 0,
+                  },
+                  oval: 40,
+              },
+            },
+          },
+        ]
       },
       {
         id: '4',
@@ -56,6 +123,34 @@ export class BowlerService {
         usesThumb: true,
         rightHanded: false,
         arsenal: [],
+        sheets: [
+          {
+            id: '4',
+            name: 'Molly Specs 2025',
+            player: this.bowlers[3],
+            data: {
+              span: {
+                thumbToRing: 2,
+                thumbToMiddle: 2,
+              },
+              middleFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              ringFinger: {
+                vertical: 1,
+                lateral: 0,
+              },
+              thumb: {
+                  pitch: {
+                    vertical: 0,
+                    lateral: 0,
+                  },
+                  oval: 40,
+              },
+            },
+          },
+        ]
       },
     ];
   }
@@ -65,5 +160,13 @@ export class BowlerService {
       return this.bowlers?.find((b: BowlerInterface) => b.id === id);
     }
     return undefined;
+  }
+
+  setSpecSheets() {
+    let ss: SpecSheetInterface[] = [];
+    this.bowlers.forEach((bowler: BowlerInterface) => {
+      bowler.sheets?.forEach((sheet: SpecSheetInterface) => ss.push(sheet));
+    });
+    this.specSheets = ss;
   }
 }

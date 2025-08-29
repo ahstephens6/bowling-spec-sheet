@@ -1,5 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { BowlerInterface } from '../../interfaces/interfaces';
+import { BowlerService } from '../../services/bowler-service';
 
 @Component({
   selector: 'app-bowler-specs',
@@ -8,12 +10,13 @@ import { Router } from '@angular/router';
   styleUrl: './bowler-specs.scss'
 })
 export class BowlerSpecs {
-  @Input() bowlerId: string;
-
+  bowlerService: BowlerService = inject(BowlerService);
+  
+  bowler: BowlerInterface | undefined;
   router: Router = inject(Router);
 
   constructor() {
-    this.bowlerId = this.getURLId();
+    this.bowler = this.bowlerService.getBowlerById(this.getURLId());
   }
 
   getURLId(): string {
