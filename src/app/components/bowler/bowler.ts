@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { BowlerService } from '../../services/bowler-service';
 import { BowlerInterface } from '../../interfaces/interfaces';
 import { RouterLink } from '@angular/router';
 

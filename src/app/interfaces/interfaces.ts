@@ -6,7 +6,7 @@ export interface BowlerInterface {
     usesThumb: boolean,
     sheets?: SpecSheetInterface[],
     rightHanded: boolean,
-    arsenal: BowlingBallInterface[],
+    arsenal?: BowlingBallInterface[],
 }
 
 export interface BowlingBallInterface {
@@ -23,6 +23,7 @@ export interface Pitches {
 }
 
 export interface SpecSheetInterface {
+    id: string,
     name: string,
     player: BowlerInterface,
     data: {

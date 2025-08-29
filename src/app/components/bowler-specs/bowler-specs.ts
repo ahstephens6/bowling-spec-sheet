@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './bowler-specs.scss'
 })
 export class BowlerSpecs {
-
+  
 }
