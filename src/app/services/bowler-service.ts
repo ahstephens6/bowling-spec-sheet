@@ -60,7 +60,10 @@ export class BowlerService {
     ];
   }
 
-  getBowlerById(id: string): BowlerInterface | undefined {
-    return this.bowlers?.find((b: BowlerInterface) => b.id === id);
+  getBowlerById(id: string | undefined): BowlerInterface | undefined {
+    if (id) {
+      return this.bowlers?.find((b: BowlerInterface) => b.id === id);
+    }
+    return undefined;
   }
 }

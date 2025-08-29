@@ -15,12 +15,13 @@ export class SpecSheet {
   bowler: BowlerInterface | undefined;
 
   @Input() specSheet: SpecSheetInterface | undefined;
+  @Input() id: string | undefined;
 
   constructor() {
     // Empty
   }
   
   ngOnInit() {
-    this.bowler = this.specSheet?.player;
+    this.bowler = this.specSheet?.player ?? this.bowlerService.getBowlerById(this.id);
   }
 }

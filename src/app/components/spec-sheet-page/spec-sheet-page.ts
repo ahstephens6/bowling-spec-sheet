@@ -21,8 +21,22 @@ export class SpecSheetPage {
     if (this.bowlerService.bowlers) {
       return [
         {
-          name: 'Xander Specs 2025',
+          name: 'Jackson Specs 2025',
           player: this.bowlerService.bowlers[0],
+          data: {
+            middleFinger: {
+              vertical: 1,
+              lateral: 0,
+            },
+            ringFinger: {
+              vertical: 1,
+              lateral: 0,
+            },
+          },
+        },
+        {
+          name: 'Taylor Specs 2025',
+          player: this.bowlerService.bowlers[1],
           data: {
             span: {
               thumbToRing: 2,
