@@ -1,5 +1,5 @@
 <main>
     @for (sheet of specSheets; track sheet) {
-        <app-spec-sheet [specSheet]="sheet" />
+        <app-spec-sheet [specSheet]="sheet" [routerLink]="'/bowler/' + sheet?.bowlerId + '/sheet/' + sheet.id" />
     }
 </main>

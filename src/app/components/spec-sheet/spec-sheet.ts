@@ -15,13 +15,20 @@ export class SpecSheet {
   bowler: BowlerInterface | undefined;
 
   @Input() specSheet: SpecSheetInterface | undefined;
-  @Input() id: string | undefined;
 
   constructor() {
     // Empty
   }
   
-  ngOnInit() {
-    this.bowler = this.specSheet?.player ?? this.bowlerService.getBowlerById(this.id);
+  ngOnInit(): void {
+    if (!this.specSheet) this.bowler = this.getBowlerFromURL();
+  }
+
+  getBowlerFromURL(): BowlerInterface | undefined {
+    this.route.params.subscribe(params => {
+      let id = params['id'];
+      return this.bowlerService.getBowlerById(id);
+    });
+    return;
   }
 }

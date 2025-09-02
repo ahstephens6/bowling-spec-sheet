@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { SpecSheetInterface } from '../../interfaces/interfaces';
 import { SpecSheet } from '../spec-sheet/spec-sheet';
 import { BowlerService } from '../../services/bowler-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-spec-sheet-page',
-  imports: [SpecSheet],
+  imports: [SpecSheet, RouterLink],
   templateUrl: './spec-sheet-page.html',
   styleUrl: './spec-sheet-page.scss'
 })

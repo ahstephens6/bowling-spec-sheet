@@ -4,8 +4,8 @@ export interface BowlerInterface {
     lastName: string,
     firstName: string,
     usesThumb: boolean,
-    sheets?: SpecSheetInterface[],
     rightHanded: boolean,
+    sheets?: SpecSheetInterface[],
     arsenal?: BowlingBallInterface[],
 }
 
@@ -13,8 +13,8 @@ export interface BowlingBallInterface {
     brand: string,
     weight: number,
     serial: string,
-    manufacturer: string,
     layout: string,
+    manufacturer: string,
 }
 
 export interface Pitches {
@@ -25,7 +25,7 @@ export interface Pitches {
 export interface SpecSheetInterface {
     id: string,
     name: string,
-    player: BowlerInterface,
+    bowlerId: string;
     data: {
         span?: {
             thumbToRing: number,

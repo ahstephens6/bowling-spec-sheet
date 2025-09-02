@@ -1,3 +1,7 @@
-@for (sheet of bowler?.sheets; track sheet) {
-    <div>{{ sheet.name }} {{ sheet.id}}</div>
-}
+<ul>
+    @for (sheet of bowler?.sheets; track sheet) {
+        <li [routerLink]="'/bowler/' + bowler?.id + '/sheet/' + sheet.id" class="no-underline">
+            <div>{{ sheet.name }} {{ sheet.id}}</div>
+        </li>
+    }
+</ul>

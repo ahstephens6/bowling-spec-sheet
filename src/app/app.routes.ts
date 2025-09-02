@@ -11,5 +11,6 @@ export const routes: Routes = [
     {path: 'spec-sheets', component: SpecSheetPage, title: 'Spec-Sheets'},
     {path: 'addBowler/:id', component: AddBowler, title: 'Add Bowler'},
     {path: 'removeBowler/:id', component: RemoveBowler, title: 'Remove Bowler'},
-    {path: 'spec-sheet/:id', component: BowlerSpecs, title: 'Bowler Sheets'},
+    {path: 'bowler/:id', component: BowlerSpecs, title: 'Bowler Sheets'},
+    {path: 'bowler/:id/sheet/:id', component: SpecSheet, title: 'Bowler Sheet'}
 ];

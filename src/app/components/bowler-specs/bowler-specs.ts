@@ -1,11 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { BowlerInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
 
 @Component({
   selector: 'app-bowler-specs',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './bowler-specs.html',
   styleUrl: './bowler-specs.scss'
 })
