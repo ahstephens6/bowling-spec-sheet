@@ -28,7 +28,7 @@ export class BowlerService {
             id: '1',
             name: 'Jackson Specs 2025',
             bowlerId: '1',
-            
+            usesThumb: false,
             data: {
               middleFinger: {
                 vertical: 1,
@@ -55,7 +55,7 @@ export class BowlerService {
             id: '2',
             name: 'Taylor Specs 2025',
             bowlerId: '2',
-            
+            usesThumb: true,
             data: {
               span: {
                 thumbToRing: 2,
@@ -93,7 +93,7 @@ export class BowlerService {
               id: '3',
               name: 'Xander Specs 2025',
               bowlerId: '3',
-              
+              usesThumb: true,
               data: {
                 span: {
                 thumbToRing: 2,
@@ -131,7 +131,7 @@ export class BowlerService {
             id: '4',
             name: 'Molly Specs 2025',
             bowlerId: '4',
-            
+            usesThumb: true,
             data: {
               span: {
                 thumbToRing: 2,

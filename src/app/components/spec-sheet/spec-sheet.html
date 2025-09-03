@@ -3,35 +3,35 @@
         {{ specSheet.name }}
     </header>
     <ion-grid>
-        <ion-row>
-            <ion-col>
-                <ion-label>Oval</ion-label>
-                <div>
+        <ion-row class="finger-oval-wrapper">
+            <ion-col class="finger-left">
+                <ion-label id="left-finger-label" class="finger-label">Oval</ion-label>
+                <div id="left-finger-content" class="finger-content">
                     <!-- add something later -->
                 </div>
             </ion-col>
-            <ion-col>
-                <ion-label>Oval</ion-label>
-                <div>
+            <ion-col class="finger-right">
+                <ion-label id="right-finger-label" class="finger-label">Oval</ion-label>
+                <div id="right-finger-content" class="finger-label">
                     <!-- add something later -->
                 </div>
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col>
+        <ion-row class="finger-wrapper">
+            <ion-col id="left-finger-arrow-wrapper">
                 <app-pitch-arrows />
             </ion-col>
-            <ion-col>
+            <ion-col id="left-finger-cut-wrapper">
                 <app-circular-cut />
             </ion-col>
-            <ion-col>
+            <ion-col id="right-finger-cut-wrapper">
                 <app-circular-cut />
             </ion-col>
-            <ion-col>
+            <ion-col id="right-finger-arrow-wrapper">
                 <app-pitch-arrows />
             </ion-col>
         </ion-row>
-        @if (bowler.usesThumb) {
+        @if (specSheet.usesThumb) {
             <ion-row>
                 <ion-col>
                     {{ bowler.rightHanded ? 'middle cut' : 'ring cut' }}
