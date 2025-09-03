@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { BowlerInterface, SpecSheetInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
 
@@ -10,11 +10,23 @@ import { BowlerService } from '../../services/bowler-service';
   styleUrl: './spec-sheet.scss'
 })
 export class SpecSheet {
-  route: ActivatedRoute = inject(ActivatedRoute);
+  router: Router = inject(Router);
   bowlerService: BowlerService = inject(BowlerService);
   specSheet: SpecSheetInterface | undefined;
 
   constructor() {
-    // Empty
+    this.setSpecSheet();
+  }
+
+  getSheetIdFromURL(): string {
+    let splitUrl = this.router.url.split(`/`);
+    return splitUrl[splitUrl.length - 1];
+  }
+
+  setSpecSheet(): void {
+    let sheetId: string = this.getSheetIdFromURL();
+    if (sheetId) {
+      this.specSheet = this.bowlerService.specSheets.find((sheet: SpecSheetInterface) => sheetId === sheet.id);
+    }
   }
 }
