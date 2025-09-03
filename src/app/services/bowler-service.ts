@@ -28,6 +28,7 @@ export class BowlerService {
             id: '1',
             name: 'Jackson Specs 2025',
             bowlerId: '1',
+            
             data: {
               middleFinger: {
                 vertical: 1,
@@ -54,6 +55,7 @@ export class BowlerService {
             id: '2',
             name: 'Taylor Specs 2025',
             bowlerId: '2',
+            
             data: {
               span: {
                 thumbToRing: 2,
@@ -73,26 +75,27 @@ export class BowlerService {
                     lateral: 0,
                   },
                   oval: 40,
+                },
               },
             },
-          },
-        ]
-      },
-      {
-        id: '3',
-        gender: 'male',
-        firstName: 'Xander',
-        lastName: 'Stephens',
-        usesThumb: true,
-        rightHanded: true,
-        arsenal: [],
-        sheets: [
-          {
-            id: '3',
-            name: 'Xander Specs 2025',
-            bowlerId: '3',
-            data: {
-              span: {
+          ]
+        },
+        {
+          id: '3',
+          gender: 'male',
+          firstName: 'Xander',
+          lastName: 'Stephens',
+          usesThumb: true,
+          rightHanded: true,
+          arsenal: [],
+          sheets: [
+            {
+              id: '3',
+              name: 'Xander Specs 2025',
+              bowlerId: '3',
+              
+              data: {
+                span: {
                 thumbToRing: 2,
                 thumbToMiddle: 2,
               },
@@ -105,11 +108,11 @@ export class BowlerService {
                 lateral: 0,
               },
               thumb: {
-                  pitch: {
-                    vertical: 0,
-                    lateral: 0,
-                  },
-                  oval: 40,
+                pitch: {
+                  vertical: 0,
+                  lateral: 0,
+                },
+                oval: 40,
               },
             },
           },
@@ -128,6 +131,7 @@ export class BowlerService {
             id: '4',
             name: 'Molly Specs 2025',
             bowlerId: '4',
+            
             data: {
               span: {
                 thumbToRing: 2,

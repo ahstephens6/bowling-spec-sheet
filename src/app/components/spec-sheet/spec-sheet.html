@@ -1,7 +1,68 @@
-@if (specSheet) {
-    <div>
+@if (specSheet && bowler) {
+    <header class="specSheetHeading">
         {{ specSheet.name }}
-    </div>
+    </header>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-label>Oval</ion-label>
+                <div>
+                    <!-- add something later -->
+                </div>
+            </ion-col>
+            <ion-col>
+                <ion-label>Oval</ion-label>
+                <div>
+                    <!-- add something later -->
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <app-pitch-arrows />
+            </ion-col>
+            <ion-col>
+                <app-circular-cut />
+            </ion-col>
+            <ion-col>
+                <app-circular-cut />
+            </ion-col>
+            <ion-col>
+                <app-pitch-arrows />
+            </ion-col>
+        </ion-row>
+        @if (bowler.usesThumb) {
+            <ion-row>
+                <ion-col>
+                    {{ bowler.rightHanded ? 'middle cut' : 'ring cut' }}
+                </ion-col>
+                <ion-col>
+                    {{ bowler.rightHanded ? 'ring cut' : 'middle cut' }}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    {{ bowler.rightHanded ? 'middle actual' : 'ring actual' }}
+                </ion-col>
+                <ion-col>
+                    {{ bowler.rightHanded ? 'ring actual' : 'middle actual' }}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <app-pitch-arrows />
+                </ion-col>
+                <ion-col>
+                    <app-circular-cut />
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    thumb oval
+                </ion-col>
+            </ion-row>
+        }
+    </ion-grid>
 }
 @else {
     <div>

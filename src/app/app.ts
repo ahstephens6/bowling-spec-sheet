@@ -2,12 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BowlerService } from './services/bowler-service';
 import { BowlerInterface } from './interfaces/interfaces';
-import { Bowler } from './components/bowler/bowler';
 import { Navigation } from "./components/navigation/navigation";
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navigation],
+  imports: [RouterOutlet, Navigation, IonicModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
