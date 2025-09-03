@@ -1,3 +1,10 @@
-<div>
-    {{ specSheet?.name }}
-</div>
+@if (specSheet) {
+    <div>
+        {{ specSheet.name }}
+    </div>
+}
+@else {
+    <div>
+        No Sheet Found
+    </div>
+}

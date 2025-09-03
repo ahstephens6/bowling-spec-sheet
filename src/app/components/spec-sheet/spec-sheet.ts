@@ -12,23 +12,9 @@ import { BowlerService } from '../../services/bowler-service';
 export class SpecSheet {
   route: ActivatedRoute = inject(ActivatedRoute);
   bowlerService: BowlerService = inject(BowlerService);
-  bowler: BowlerInterface | undefined;
-
-  @Input() specSheet: SpecSheetInterface | undefined;
+  specSheet: SpecSheetInterface | undefined;
 
   constructor() {
     // Empty
-  }
-  
-  ngOnInit(): void {
-    if (!this.specSheet) this.bowler = this.getBowlerFromURL();
-  }
-
-  getBowlerFromURL(): BowlerInterface | undefined {
-    this.route.params.subscribe(params => {
-      let id = params['id'];
-      return this.bowlerService.getBowlerById(id);
-    });
-    return;
   }
 }

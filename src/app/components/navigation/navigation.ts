@@ -18,9 +18,10 @@ export class Navigation {
     this.navLinks = NAVLINKS;
   }
 
-  isLinkActive(link: NavigationInterface): boolean {
-    let [splitLink]: string[] = link.route.split(`/`);
+  isLinkActive(link: NavigationInterface): boolean  {
+    let splitLink: string[] = link.route.split(`/`);
     let splitRoute: string = this.router.url.split(`/`)[1];
-    return splitLink == splitRoute;
+    if (splitLink[0] === '' && splitRoute === 'bowler') return true;
+    return splitLink[0] === splitRoute;
   }
 }

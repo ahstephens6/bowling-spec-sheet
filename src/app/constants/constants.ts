@@ -2,7 +2,7 @@ import { NavigationInterface } from "../interfaces/interfaces"
 
 export const NAVLINKS: NavigationInterface[] = [
     {
-        name: `Home`,
+        name: `Bowlers`,
         route: '',
     },
     {
@@ -13,8 +13,4 @@ export const NAVLINKS: NavigationInterface[] = [
         name: `Remove Bowler`,
         route: `removeBowler/:id`,
     },
-    {
-        name: `Spec Sheets`,
-        route: `spec-sheets`
-    }
 ];
