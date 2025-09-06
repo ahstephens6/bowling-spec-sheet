@@ -27,7 +27,6 @@ export interface SpecSheetInterface {
     name: string,
     bowlerId: string;
     date?: Date;
-    usesThumb: boolean,
     data: {
         span?: {
             thumbToRing: number,

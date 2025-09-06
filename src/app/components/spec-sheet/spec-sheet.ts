@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { BowlerInterface, SpecSheetInterface } from '../../interfaces/interfaces';
 import { BowlerService } from '../../services/bowler-service';
 import { IonicModule } from '@ionic/angular';
-import { PitchArrows } from '../pitch-arrows/pitch-arrows';
 import { CircularCut } from '../circular-cut/circular-cut';
+import { PitchBox } from '../../pitch-box/pitch-box';
 
 @Component({
   selector: 'app-spec-sheet',
-  imports: [IonicModule, PitchArrows, CircularCut],
+  imports: [IonicModule, CircularCut, PitchBox],
   templateUrl: './spec-sheet.html',
   styleUrl: './spec-sheet.scss',
 })

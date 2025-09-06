@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+
+.pitch-box {
+    border: 1px solid $mili-black;
+    min-width: 25px;
+    min-height: 10px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PitchArrows } from './pitch-arrows';
+import { PitchBox } from './pitch-box';
 
-describe('PitchArrows', () => {
-  let component: PitchArrows;
-  let fixture: ComponentFixture<PitchArrows>;
+describe('PitchBox', () => {
+  let component: PitchBox;
+  let fixture: ComponentFixture<PitchBox>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PitchArrows]
+      imports: [PitchBox]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PitchArrows);
+    fixture = TestBed.createComponent(PitchBox);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
