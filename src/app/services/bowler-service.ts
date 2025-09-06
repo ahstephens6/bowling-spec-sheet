@@ -29,13 +29,21 @@ export class BowlerService {
             name: 'Jackson Specs 2025',
             bowlerId: '1',
             data: {
-              middleFinger: {
-                vertical: 1,
-                lateral: 0,
-              },
-              ringFinger: {
-                vertical: 1,
-                lateral: 0,
+              fingers: {
+                middleFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
+                ringFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
               },
             },
           },
@@ -59,13 +67,21 @@ export class BowlerService {
                 thumbToRing: 2,
                 thumbToMiddle: 2,
               },
-              middleFinger: {
-                vertical: 1,
-                lateral: 0,
-              },
-              ringFinger: {
-                vertical: 1,
-                lateral: 0,
+              fingers: {
+                middleFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
+                ringFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
               },
               thumb: {
                   pitch: {
@@ -96,13 +112,21 @@ export class BowlerService {
                 thumbToRing: 2,
                 thumbToMiddle: 2,
               },
-              middleFinger: {
-                vertical: 1,
-                lateral: 0,
-              },
-              ringFinger: {
-                vertical: 1,
-                lateral: 0,
+              fingers: {
+                middleFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
+                ringFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
               },
               thumb: {
                 pitch: {
@@ -133,13 +157,21 @@ export class BowlerService {
                 thumbToRing: 2,
                 thumbToMiddle: 2,
               },
-              middleFinger: {
-                vertical: 1,
-                lateral: 0,
-              },
-              ringFinger: {
-                vertical: 1,
-                lateral: 0,
+              fingers: {
+                middleFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
+                ringFinger: {
+                  pitches: {
+                    vertical: 1,
+                    lateral: 0,
+                  },
+                  oval: 0,
+                },
               },
               thumb: {
                   pitch: {

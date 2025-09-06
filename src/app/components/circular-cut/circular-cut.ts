@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-circular-cut',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './circular-cut.scss'
 })
 export class CircularCut {
+  @Input() cut: Number = 0;
 
+  constructor() {
+    // Empty
+  }
 }

@@ -31,13 +31,21 @@ export interface SpecSheetInterface {
         span?: {
             thumbToRing: number,
             thumbToMiddle: number,
-        }
-        middleFinger: Pitches,
-        ringFinger: Pitches,
+        },
+        fingers: {
+            middleFinger: {
+                pitches: Pitches,
+                oval: Number,
+            },
+            ringFinger: {
+                pitches: Pitches,
+                oval: Number,
+            },
+        },
         thumb?: {
             pitch: Pitches,
             oval: Number,
-        }
+        },
     },
 }
 

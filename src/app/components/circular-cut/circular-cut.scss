@@ -1,0 +1,10 @@
+@use '../../../styles/variables' as *;
+
+.circular-cut {
+    border: 1px solid $mili-black;
+    border-radius: 50%;
+    min-width: 80px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+}

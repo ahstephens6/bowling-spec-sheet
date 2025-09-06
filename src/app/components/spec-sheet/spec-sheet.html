@@ -19,16 +19,16 @@
         </ion-row>
         <ion-row class="finger-wrapper">
             <ion-col id="left-finger-arrow-wrapper">
-                <app-pitch-box [pitch]="bowler.rightHanded ? specSheet.data.middleFinger.vertical : specSheet.data.ringFinger.vertical" />
+                <app-pitch-box [pitch]="bowler.rightHanded ? specSheet.data.fingers.middleFinger.pitches.vertical : specSheet.data.fingers.ringFinger.pitches.vertical" />
             </ion-col>
             <ion-col id="left-finger-cut-wrapper">
-                <app-circular-cut />
+                <app-circular-cut [cut]="bowler.rightHanded ? specSheet.data.fingers.middleFinger.oval : specSheet.data.fingers.ringFinger.oval" />
             </ion-col>
             <ion-col id="right-finger-cut-wrapper">
                 <app-circular-cut />
             </ion-col>
             <ion-col id="right-finger-arrow-wrapper">
-                <app-pitch-box [pitch]="bowler.rightHanded ? specSheet.data.ringFinger.vertical : specSheet.data.middleFinger.vertical" />
+                <app-pitch-box [pitch]="bowler.rightHanded ? specSheet.data.fingers.ringFinger.pitches.vertical : specSheet.data.fingers.middleFinger.pitches.vertical" />
             </ion-col>
         </ion-row>
         @if (specSheet.data.thumb) {
