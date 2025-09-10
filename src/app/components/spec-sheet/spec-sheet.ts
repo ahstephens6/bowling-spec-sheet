@@ -5,10 +5,11 @@ import { BowlerService } from '../../services/bowler-service';
 import { IonicModule } from '@ionic/angular';
 import { CircularCut } from '../circular-cut/circular-cut';
 import { PitchBox } from '../../pitch-box/pitch-box';
+import { DistanceBox } from '../distance-box/distance-box';
 
 @Component({
   selector: 'app-spec-sheet',
-  imports: [IonicModule, CircularCut, PitchBox],
+  imports: [IonicModule, CircularCut, PitchBox, DistanceBox],
   templateUrl: './spec-sheet.html',
   styleUrl: './spec-sheet.scss',
 })

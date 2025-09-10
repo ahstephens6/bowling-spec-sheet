@@ -14,4 +14,23 @@ ion-grid {
             justify-content: start;
         }
     }
+    .finger-wrapper {
+        #left-finger-arrow-wrapper {
+            margin-right: 10px;
+        }
+        #right-finger-arrow-wrapper {
+            margin-left: 10px;
+        }
+        .finger-pitches {
+            display: flex;
+            flex-flow: column nowrap;
+            grid-gap: 5px;
+        }
+        .finger-cut-wrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            grid-gap: 5px;
+            min-width: 250px;
+        }
+    }
 }
